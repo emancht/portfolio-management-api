@@ -1,0 +1,266 @@
+{
+	"info": {
+		"_postman_id": "dc73e2aa-2abf-4cdc-9192-4903904d8e86",
+		"name": "Portfolio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36175599"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Eman Chakma\",\r\n    \"email\": \"emancht@gmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/Register",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"emancht@gmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/Login",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Logout",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Portfolio",
+			"item": [
+				{
+					"name": "CreatePortfolio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "ABCDF",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "REACT NODE EXPRESS",
+									"type": "text"
+								},
+								{
+									"key": "img",
+									"type": "file",
+									"src": "/C:/Users/emanc/Desktop/WhatsApp Image 2025-02-20 at 06.03.38_3b1617d5.jpg"
+								},
+								{
+									"key": "codelink",
+									"value": "http://localhost:3000/api",
+									"type": "text"
+								},
+								{
+									"key": "livelink",
+									"value": "http://localhost:3000/api",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/CreatePortfolio",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"CreatePortfolio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdatePortfolio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Todo App",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "REACTJS, NODEJS, NEXTJS, TAILWINDCSS, EXPRESSJS",
+									"type": "text"
+								},
+								{
+									"key": "codelink",
+									"value": "http://lgithub.com/emancht",
+									"type": "text"
+								},
+								{
+									"key": "livelink",
+									"value": "http://localhost:3000/api",
+									"type": "text"
+								},
+								{
+									"key": "img",
+									"type": "file",
+									"src": "/C:/Users/emanc/Desktop/1734165408228-439547683.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/UpdatePortfolio/67bbbcd5784fd724576f6c1e\n\n",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"UpdatePortfolio",
+								"67bbbcd5784fd724576f6c1e\n\n"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReadPortfolio",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/ReadPortfolio/67bb45010f1ab8d90b954187",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"ReadPortfolio",
+								"67bb45010f1ab8d90b954187"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePortfolio",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/DeletePortfolio/67bbbba3908a90126c35d253",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"DeletePortfolio",
+								"67bbbba3908a90126c35d253"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PortfolioList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/PortfolioList",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"PortfolioList"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost:3000/api",
+			"type": "string"
+		}
+	]
+}
